@@ -1,38 +1,40 @@
 <article class="card">
-
-    <div class="card-image">
+  <a href="{{url}}">
+    <div class="card-image card">
       <figure class="image is-4by3">
         {{#if feature_image}}
-          <img src="{{feature_image}}" alt="{{title}}">
+        <img src="{{feature_image}}" alt="{{title}}">
         {{else}}
-          <img class="widget-image" src="https://parsecgaming.com/static/opengraph-25a5b334c1fb7035e98e3511891d659c.png">
+        <img class="widget-image" src="https://parsecgaming.com/static/opengraph-25a5b334c1fb7035e98e3511891d659c.png">
         {{/if}}
       </figure>
     </div>
 
-  <div class="card-content">
-    {{#if author.profile_image}}
-    <div class="media">
-      <div class="media-left">
-        <fieldset class="is-48x48">
-          <img src="{{author.profile_image}}" alt="Profile Image">
-        </fieldset>
+    <div class="card-content">
+      {{#if author.profile_image}}
+      <div class="media">
+        <div class="media-left">
+          <fieldset class="is-48x48">
+            <img src="{{author.profile_image}}" alt="Profile Image">
+          </fieldset>
+        </div>
       </div>
-    </div>
-    {{/if}}
-    <a href="{{url}}" class="title is-4">{{title}}</a>
-    <div class="content">
+      {{/if}}
       <p>
-        {{#if meta_description}}
-          {{meta_description}}
-        {{else}}
-          {{excerpt words="40"}}...
-        {{/if}}
-      </p>
-      <p>
-        {{author}} in {{tags}} on
+        {{tags}}
+        <span class="divider-verticle"> | </span>
         <time>{{date}}</time>
       </p>
+      <h2 href="{{url}}" class="title is-4">{{title}}</h2>
+      <div class="content">
+        <p>
+          {{#if meta_description}}
+          {{meta_description}}
+          {{else}}
+          {{excerpt words="40"}}...
+          {{/if}}
+        </p>
+      </div>
     </div>
-  </div>
+  </a>
 </article>

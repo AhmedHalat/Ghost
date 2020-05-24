@@ -45,6 +45,7 @@ body{
   padding: 20px 40px 10px 40px;
   background-color: white;
   border-radius: 50px 50px 50px 50px;
+  width: 160px;
 }
 
 .profile-image{
@@ -71,6 +72,19 @@ td:first-child {
 
 .container{
   max-width: 1165px;
+}
+
+.secondary-body-color{
+  background-color: orange
+}
+
+.card{
+  border-radius: 22px;
+  overflow: hidden;
+}
+
+.card:hover{
+  background-color: rgba(233, 233, 233, 1);
 }
 
 h1.content-heading{
